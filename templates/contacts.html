@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacts</title>
+    <style>
+        body {
+            background: linear-gradient(135deg,#ffa5f1, #f3ea82);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            /* Set font color to black */
+            color: black;
+            font-family: monospace; /* Change the font to monospace */
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .header-text {
+            background: linear-gradient(135deg, #b4ffbb, rgb(255, 192, 242));
+            display: inline-block;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+        }
+        .informations {
+            display: flex; /* Create a flex container to align content and programming-works side by side */
+            justify-content: center;
+        }
+        .infos {
+            background: rgb(255, 240, 193);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 100%; /* Set maximum width to 100% for content */
+        }
+        .infos-container {
+            background: #ffbdf1; /* Purple background for the programming-works container */
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #000000;
+            margin: 10px;
+            max-width: 70%; /* Set maximum width to 100% for content */
+        }
+        .infos-grid {
+            display: grid; /* Use flex for easier alignment */
+            grid-template-columns: repeat(2, 1fr); /* Create 2 columns with equal width */
+            gap: 20px; /* Add equal space between grid items */
+        }
+        .info-box {
+            display: flex; /* Display images and text side by side */
+            align-items: center;
+            background: #ffffff; /* White background for the programming-works section */
+            border: 1px solid #fab9ec;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Align text to the left */
+        }
+        .info-box img {
+            max-width: 130px; /* Adjust the image size as needed */
+            margin-right: 10px; /* Add right margin between the image and text */
+        }
+        h1 {
+            font-size: 24px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-direction: column; /* Change the flex direction to column */
+        }
+        .nav-row {
+            display: flex;
+            justify-content: space-between; /* Spread items across the row */
+        }
+        .nav-item {
+            display: flex; /* Add display flex to make items side by side */
+            align-items: center;
+            margin: 10px 20px; /* Add equal space around nav-item boxes */
+            border: 1px solid #000000;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background: white; /* Add white background to the nav-item */
+            text-align: center; /* Center the text */
+        }
+        .nav-item a {
+            text-decoration: none; /* Remove underlines from links */
+            color: black; /* Set link text color to black */
+        }
+        .box {
+            display: flex;
+            flex-direction: column; /* Change the flex direction to column */
+            align-items: center; /* Center align items in the box */
+        }
+        .box-image {
+            max-width: 120px; /* Adjust the image size as needed */
+            margin-bottom: 10px; /* Add bottom margin between the image and text */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">
+            <h1>⋆｡‧˚ʚ Reach Out To Me Here! ɞ˚‧｡⋆</h1>
+        </div>
+    </div>
+    <div class="content-and-works">
+        <div class="content">
+            <div class="nav-links">
+                <div class="nav-row"> <!-- Added a new container for the row -->
+                    <div class="nav-item">
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='cp.jpg') }}" class="box-image" alt="CP Number Image">
+                            <a>09156181647</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='gmail.jpg') }}" class="box-image" alt="Gmail Image">
+                            <a href="{{ url_for('redirect_to_gmail') }}">Gmail</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='fb.jpg') }}" class="box-image" alt="Facebook Image">
+                            <a href="{{ url_for('redirect_to_facebook') }}">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-row"> <!-- Added a new container for the row -->
+                    <div class="nav-item">
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='ig.jpg') }}" class="box-image" alt="Instagram Image">
+                            <a href="{{ url_for('redirect_to_instagram') }}">Instagram</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='x.jpg') }}" class="box-image" alt="Twitter Image">
+                            <a href="{{ url_for('redirect_to_twitter') }}">Twitter</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='tiktok.jpg') }}" class="box-image" alt="Tiktok Image">
+                            <a href="{{ url_for('redirect_to_tiktok') }}">Tiktok</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

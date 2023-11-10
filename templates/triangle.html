@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert to Uppercase</title>
+    <style>
+        body {
+            background: linear-gradient(135deg,#eca7f5, rgb(255, 244, 187));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: monospace;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 300%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(151, 212, 152);
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .box-image {
+            width: 350px; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate the Area of Triangle</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='triangleee.png') }}" class="box-image" alt="Triangle Area Image">
+    </div>
+    
+    <form action="/triangle" method="post">
+        <label for="base">Enter the base of the triangle:</label>
+        <input type="number" name="base" id="base" step="0.01" required>
+        <br>
+        <label for="height">Enter the height of the triangle:</label>
+        <input type="number" name="height" id="height" step="0.01" required>
+        <br>
+        <input type="submit" value="Calculate Area">
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% else %}
+        <p></p>
+    {% endif %}
+</body>
+</html>

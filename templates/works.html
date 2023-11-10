@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Works Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff9c0, #feabff,#d7ffc0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: black;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-text {
+            background: linear-gradient(135deg, #d3ffba, rgb(192, 255, 214), #b3f1ba);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-family: monospace;
+        }
+        .content-and-works {
+            display: flex;
+            justify-content: center;
+        }
+        .box {
+            background: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #000000;
+            text-align: center;
+            max-width: 100%;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        .box-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between; /* Add space between boxes */
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 20px;
+            border: 1px solid #000000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: white;
+        }
+        .box-image {
+            max-width: 50%;
+            max-height: 80%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">
+            <h1>‧͙⁺˚*･ My Programming Works ･*˚⁺‧͙</h1>
+        </div>
+    </div>
+    <div class="content-and-works">
+        <div class="content">
+            <div class="box-container">
+                <div class="box">
+                    <img src="{{ url_for('static', filename='upc.jpg') }}" class="box-image" alt="Uppercase Image">
+                    <a href="/touppercase">To Uppercase</a>
+                </div>
+
+                <div class="box"> <img src="{{ url_for('static', filename='circ.jpg') }}" class="box-image" alt="Circle Image">
+                    <a href="/circle">Area of Circle</a>
+                </div>
+
+                <div class="box"> <img src="{{ url_for('static', filename='tri.jpg') }}" class="box-image" alt="Triangle Image">
+                    <a href="/triangle">Area of Triangle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

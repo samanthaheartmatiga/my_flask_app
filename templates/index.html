@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFC0CB, #90EE90);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            /* Set font color to black */
+            color: black;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-text {
+            background: linear-gradient(135deg, #a2f4a2, rgb(255, 242, 192), #f1b3d2);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+            font-family: monospace; /* Change font to monospace */
+        }
+        .content-and-works {
+            display: flex; /* Create a flex container to align content and programming-works side by side */
+            justify-content: center;
+        }
+        .content {
+            background: rgb(255, 240, 193);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+            text-align: center;
+            max-width: 50%; /* Set maximum width to 50% for content */
+            font-family: monospace; /* Change font to monospace */
+        }
+        .programming-works-container {
+            background: rgb(255, 255, 255); /* White background for the programming-works container */
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #000000;
+            margin: 10px;
+            max-width: 50%; /* Set maximum width to 50% for programming-works container */
+        }
+        .programming-works {
+            background: #ffbdf1; /* Purple background for the programming-works section */
+            border: 1px solid #ffbdf1;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: monospace; /* Change font to monospace */
+        }
+        .programming-works a {
+            text-decoration: none; /* Remove underline from hyperlinks */
+        }
+        h1 {
+            font-size: 24px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-direction: column; /* Change the flex direction to column */
+        }
+        .nav-item {
+            display: flex; /* Add display flex to make items side by side */
+            align-items: center;
+            margin: 10px 10px; /* Add space around nav-item boxes */
+            border: 1px solid #000000;
+            padding: 5px 5px;
+            border-radius: 5px;
+            background: white; /* Add white background to the nav-item */
+        }
+        .box {
+            display: flex;
+            flex-direction: column; /* Change the flex direction to column */
+            align-items: center; /* Center align items in the box */
+        }
+        .box-image {
+            max-width: 100px; /* Adjust the image size as needed */
+            margin-bottom: 10px; /* Add bottom margin between the image and text */
+        }
+        .box-image2 {
+            max-width: 200px; /* Adjust the image size as needed */
+            margin-bottom: 20px; /* Add bottom margin between the image and text */
+        }
+        /* Set font color to black */
+        body,
+        .header-text,
+        .content,
+        .programming-works,
+        .nav-item,
+        .nav-links,
+        .box {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">
+            <h1>☆⋆｡°★ Welcome to Heart's Official Website ★°｡⋆☆</h1>
+        </div>
+    </div>
+    <div class="content-and-works">
+        <div class="content">
+            <div class="nav-links">
+                <div class="nav-item">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='profile.jpg') }}" class="box-image" alt="Profile Image">
+                        <a href="/profile">Profile</a>
+                    </div>
+                    <a"/profile">Learn more about me!</a>
+                </div>
+                <div class="nav-item">
+                    <div class "box">
+                        <img src="{{ url_for('static', filename='works.jpg') }}" class="box-image" alt="Works Image">
+                        <a href="/works">Works</a>
+                    </div>
+                    <a"/works">Take a look at my Works!</a>
+                </div>
+                <div class="nav-item">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='contact.jpg') }}" class="box-image" alt="Contact Image">
+                        <a href="/contact">Contact</a>
+                    </div>
+                    <a"/contact">You can find me here!</a>
+                </div>
+            </div>
+        </div>
+        <div class="programming-works-container"> <!-- Purple container for programming-works -->
+            <div class="programming-works">
+                <h1>Welcome to my<br>Programming<br>Works!</h1>
+                <ul>
+                    <li><a href="/touppercase">toUpperCase</a></li>
+                    <li><a href="/circle">Area of a Circle</a></li>
+                    <li><a href="/triangle">Area of a Triangle</a></li>
+                </ul>
+            </div>
+            <img src="{{ url_for('static', filename='progw.jpg') }}" class="box-image2" alt="Programming Works Image">
+        </div>
+    </div>
+</body>
+</html>

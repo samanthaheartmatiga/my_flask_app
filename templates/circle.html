@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert to Uppercase</title>
+    <style>
+        body {
+            background: linear-gradient(135deg,#a7f5b0, rgb(255, 187, 254));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: monospace;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #f5f2a7;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .box-image {
+            width: 250px; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate the Area of Circle</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='circleee.png') }}" class="box-image" alt="Circle Area Image">
+    </div>
+
+    <!DOCTYPE html>
+<html>
+<head>
+
+    <form method="post" action="/circle">
+        <label for="radius">Enter the radius:</label>
+        <input type="text" name="radius" required>
+        <br>
+        <input type="submit" value="Calculate Area">
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% else %}
+        <p></p>
+    {% endif %}
+</body>
+</html>
